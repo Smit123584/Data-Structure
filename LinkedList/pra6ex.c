@@ -49,7 +49,7 @@ void insertAfter(int key, int value) {
         temp = temp->next;
 
     if (temp == NULL) {
-        printf("Node with value %d not found\n", key);
+        printf("Node with value %d not found.\n", key);
         return;
     }
 
@@ -59,7 +59,7 @@ void insertAfter(int key, int value) {
     newNode->next = temp->next;
     newNode->prev = temp;
 
-    if (temp->next == NULL)
+    if (temp->next != NULL)
         temp->next->prev = newNode;
 
     temp->next = newNode;
@@ -76,7 +76,8 @@ void display() {
     printf("Doubly Linked List: ");
     while (temp != NULL) {
         printf("%d <-> ", temp->data);
-        temp = temp->next; }
+        temp = temp->next;
+    }
     printf("NULL\n");
 }
 
@@ -84,11 +85,11 @@ int main() {
     int choice, value, key;
 
     while (1) {
-        printf("\n--- Doubly Linked List Menu --- \n");
-        printf("1. Insert at Beginning \n");
-        printf("2. Insert at End \n");
-        printf("3. Insert After Given Node \n");
-        printf("4. Display \n");
+        printf("\n--- Doubly Linked List Menu ---\n");
+        printf("1. Insert at Beginning\n");
+        printf("2. Insert at End\n");
+        printf("3. Insert After Given Node\n");
+        printf("4. Display\n");
         printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
