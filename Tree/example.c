@@ -52,7 +52,7 @@ int main() {
 
     printf("Inorder Traversal: ");
     inorder(root);
-    
+
     printf("\nPreorder Traversal: ");
     preorder(root);
 
