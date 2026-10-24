@@ -6,7 +6,6 @@ int graph[MAX][MAX];
 int visited[MAX];
 int n;
 
-// Depth First Search
 void DFS(int vertex)
 {
     int i;
@@ -21,8 +20,6 @@ void DFS(int vertex)
         }
     }
 }
-
-// Breadth First Search
 void BFS(int start)
 {
     int queue[MAX];
